@@ -1,5 +1,6 @@
-import MainPage from "./pages/MainPage";
 import "@/assets/styles/main.scss";
+
+import MainPage from "@/pages/main-page";
 
 function App() {
 	return <MainPage />;

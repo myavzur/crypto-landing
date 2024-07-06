@@ -1,0 +1,30 @@
+.card {
+	display: grid;
+	grid-template-areas:
+		"image phrase"
+		"image store";
+	align-items: center;
+	justify-content: flex-start;
+	background-color: var(--color-grey-dark-glassed-340);
+	color: var(--color-white-glassed-400);
+	width: max-content;
+	padding: 8px 20px 8px 12px;
+	border-radius: 12px;
+
+	&__image {
+		grid-area: image;
+		width: 25px;
+		height: 25px;
+		margin-right: 8px;
+	}
+
+	&__phrase {
+		grid-area: phrase;
+		font-size: 12px;
+	}
+
+	&__store {
+		grid-area: store;
+		font-size: 20px;
+	}
+}

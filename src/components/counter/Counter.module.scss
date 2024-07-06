@@ -1,0 +1,17 @@
+.counter {
+	display: flex;
+	flex-direction: column;
+
+	&__value {
+		text-transform: uppercase;
+		line-height: 48px;
+		font-size: 48px;
+		font-weight: 700;
+	}
+
+	&__name {
+		color: var(--color-white-glassed-300);
+		font-size: 18px;
+		font-weight: 400;
+	}
+}

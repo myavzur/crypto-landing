@@ -1,0 +1,19 @@
+body {
+	--color-black: #1C1A1A;
+
+	--color-grey: #828282;
+
+	--color-grey-dark: rgb(48, 45, 45);
+	--color-grey-dark-glassed-340: rgba(48, 45, 45, 34%);
+
+	--color-white: rgb(242, 242, 242);
+	--color-white-glassed-400: rgba(242, 242, 242, 40%);
+	--color-white-glassed-300: rgba(242, 242, 242, 30%);
+
+	--gradient-primary: linear-gradient(
+		90deg,
+		#7C6FCF 0%,
+		#74AEAA 95%,
+		#6FCF97 100%
+	);
+}

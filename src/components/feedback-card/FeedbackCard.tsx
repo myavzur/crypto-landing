@@ -1,7 +1,7 @@
 import { FC } from "react";
 
-import styles from "./FeedbackCard.module.scss";
 import { FeedbackCardProps } from "./FeedbackCard.interface";
+import styles from "./FeedbackCard.module.scss";
 
 export const FeedbackCard: FC<FeedbackCardProps> = ({
 	image,

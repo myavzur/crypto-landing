@@ -1,3 +1,10 @@
+# Preview
+## Laptop view
+![Crypto - Laptop view](https://github.com/myavzur/crypto-landing-test/blob/main/preview/view-laptop.png?raw=true)
+
+## Mobile view
+![Crypto - Laptop view](https://github.com/myavzur/crypto-landing-test/blob/main/preview/view-mobile.png?raw=true)
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

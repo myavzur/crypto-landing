@@ -1,6 +1,10 @@
 import { ButtonHTMLAttributes } from "react";
 
-export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+import { SizableComponentProps } from "@/interfaces";
+
+type HTMLButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
+
+export interface ButtonProps extends HTMLButtonProps, SizableComponentProps<"sm"> {
 	children: string;
 	isUppercase?: boolean;
 }

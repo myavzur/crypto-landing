@@ -4,10 +4,13 @@ import { FC } from "react";
 import { ButtonProps } from "./Button.interface";
 import styles from "./Button.module.scss";
 
-export const Button: FC<ButtonProps> = ({ isUppercase = true, children }) => {
+export const Button: FC<ButtonProps> = ({ isUppercase = true, size, children }) => {
 	return (
 		<button
-			className={cn(styles.button, { [styles.button_uppercase]: isUppercase })}
+			className={cn(styles.button, {
+				[styles.button_uppercase]: isUppercase,
+				[styles[`button_size-${size}`]]: Boolean(size)
+			})}
 		>
 			{children}
 		</button>

@@ -27,8 +27,11 @@
     "paths": {
       "@/*": ["./src/*"],
       "^@/assets/": ["./src/assets/*"],
+      "^@/interfaces": ["./src/interfaces"],
       "^@/helpers": ["./src/helpers"],
       "^@/helpers/": ["./src/helpers/*"],
+      "^@/hooks": ["./src/hooks"],
+      "^@/contexts": ["./src/contexts/*"],
       "^@/pages/": ["./src/pages/*"],
       "^@/components/": ["./src/components/*"]
     }

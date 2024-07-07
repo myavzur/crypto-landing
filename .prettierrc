@@ -14,7 +14,10 @@
   "importOrder": [
     "<THIRD_PARTY_MODULES>",
 		"^@/assets",
+    "^@/interfaces",
     "^@/helpers",
+    "^@/hooks",
+    "^@/contexts",
 		"^@/pages",
 		"^@/components",
     "^[./]"

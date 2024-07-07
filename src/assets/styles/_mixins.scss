@@ -1,0 +1,56 @@
+// Responsiveness settings
+$phone-portrait-max-width: 320px;
+$phone-landscape-max-width: 480px;
+$tablet-portrait-max-width: 768px;
+$laptop-max-width: 1200px;
+$laptop-md-max-width: 1400px;
+$desktop-max-width: 1680px;
+
+// Responsive breakpoints
+@mixin bpto($point) {
+	// Portrait phones (320+)
+	@if $point == phone-portrait {
+		@media only screen and (max-width: $phone-portrait-max-width) {
+      @content;
+    }
+	}
+
+  // Landscape phones (480+)
+  @else if $point == phone-landscape {
+    @media only screen and (max-width: $phone-landscape-max-width) {
+      @content;
+    }
+  }
+  // Portrait tablet (768+)
+  @else if $point == tablet-portrait {
+    @media only screen and (max-width: $tablet-portrait-max-width) {
+      @content;
+    }
+  }
+  // Laptop (1280px+)
+  @else if $point == laptop {
+    @media only screen and (max-width: $laptop-max-width) {
+      @content;
+    }
+  }
+  // Laptop middle (1400+)
+  @else if $point == laptop-md {
+    @media only screen and (max-width: $laptop-md-max-width) {
+      @content;
+    }
+  }
+  // Desktop (1680+)
+  @else if $point == desktop {
+    @media only screen and (max-width: $desktop-max-width) {
+      @content;
+    }
+  }
+}
+
+@mixin bp($points...) {
+  @each $point in $points {
+    @include bpto($point) {
+      @content;
+    }
+  }
+}

@@ -1,3 +1,5 @@
+@import "@/assets/styles/_mixins.scss";
+
 .container {
 	position: relative;
 	display: flex;
@@ -6,8 +8,15 @@
 	width: 100%;
 	height: 100%;
 	margin: 0 auto;
-
 	max-width: 1280px;
+	padding: 40px 0 35px 0;
+
+
+	@include bp(phone-portrait) {
+		max-width: 100%;
+		padding: 15px;
+		align-items: center;
+	}
 
 	&_absolute {
 		position: absolute;
@@ -27,6 +36,10 @@
 
 	&_role-feedback {
 		z-index: var(--z-page-main-feedback);
+
+		@include bp(phone-portrait) {
+			display: none;
+		}
 	}
 }
 
@@ -73,31 +86,41 @@
 	height: 100vh;
 	overflow: hidden;
 	background-color: var(--color-black);
-	padding: 40px 0 35px 0;
 
 	&__title {
 		text-transform: uppercase;
 		line-height: 120%;
-		font-size: 84px;
-		font-weight: 700;
 		color: var(--color-white);
 		max-width: 90%;
+		font-size: 84px;
+		font-weight: 700;
+
+		@include bp(phone-portrait) {
+			font-size: 40px;
+			text-align: center;
+			word-break: break-word;
+		}
 	}
 
 	&__verbose {
 		color: var(--color-grey);
 		font-size: 34px;
+
+		@include bp(phone-portrait) {
+			font-size: 20px;
+			text-align: center;
+		}
 	}
 
 	&__counters {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		max-width: 45%;
+		width: min(532px, 100%);
 	}
 
 	&__button {
-		max-width: 42%;
+		width: min(532px, 100%);
 	}
 
 	&__stores {

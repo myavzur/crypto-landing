@@ -27,4 +27,20 @@
 		grid-area: store;
 		font-size: 20px;
 	}
+
+	&_size-sm {
+		padding: 4px 16px 4px 8px;
+
+		.card__image {
+			margin-right: 8px;
+		}
+
+		.card__phrase {
+			font-size: 10px;
+		}
+
+		.card__store {
+			font-size: 14px;
+		}
+	}
 }

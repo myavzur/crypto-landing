@@ -1,6 +1,8 @@
 import { ReactNode } from "react";
 
-export interface StoreCardProps {
+import { SizableComponentProps } from "@/interfaces";
+
+export interface StoreCardProps extends SizableComponentProps<"sm"> {
 	iconElement: ReactNode;
 	catchPhrase: string;
 	storeName: string;

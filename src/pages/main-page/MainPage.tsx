@@ -1,10 +1,6 @@
 import cn from "classnames";
 import { FC } from "react";
 
-import adalinaAvatarSrc from "@/assets/images/avatars/adalina.jpg";
-import alexanderAvatarSrc from "@/assets/images/avatars/alexander.jpg";
-import lorenzoAvatarSrc from "@/assets/images/avatars/lorenzo.jpg";
-import rushanaAvatarSrc from "@/assets/images/avatars/rushana.jpg";
 import BitcoinSvg from "@/assets/vectors/currencies/bitcoin.svg?react";
 import EthereumSvg from "@/assets/vectors/currencies/ethereum.svg?react";
 import LitecoinSvg from "@/assets/vectors/currencies/litecoin.svg?react";
@@ -17,6 +13,7 @@ import { Icon } from "@/components/icon";
 import { StoreCard } from "@/components/store-card";
 
 import styles from "./MainPage.module.scss";
+import { countersMockData, feedbackMockData } from "./mock";
 
 const MainPage: FC = () => {
 	return (
@@ -41,45 +38,12 @@ const MainPage: FC = () => {
 				)}
 			>
 				<div className={styles.feedback}>
-					<FeedbackCard
-						image={{
-							src: lorenzoAvatarSrc,
-							alt: "Lorenzo avatar"
-						}}
-						name="Lorenzo"
-						accountTag="@lorenzoo"
-						description="Amazing Telegram bot! Provides real-time crypto prices and news"
-					/>
-
-					<FeedbackCard
-						image={{
-							src: adalinaAvatarSrc,
-							alt: "Adalina avatar"
-						}}
-						name="Adalina"
-						accountTag="@ada"
-						description="Must-have bot for crypto traders. Accurate signals and analysis"
-					/>
-
-					<FeedbackCard
-						image={{
-							src: alexanderAvatarSrc,
-							alt: "Alexander avatar"
-						}}
-						name="Alexander"
-						accountTag="@alex_x"
-						description="Superb cryptocurrency bot! Quick updates and reliable data"
-					/>
-
-					<FeedbackCard
-						image={{
-							src: rushanaAvatarSrc,
-							alt: "Rushana avatar"
-						}}
-						name="Rushana"
-						accountTag="@Hana"
-						description="Efficient and user-friendly bot. Simplifies crypto trading tasks"
-					/>
+					{feedbackMockData.map((feedback) => (
+						<FeedbackCard
+							key={feedback.accountTag}
+							{...feedback}
+						/>
+					))}
 				</div>
 			</div>
 
@@ -94,20 +58,12 @@ const MainPage: FC = () => {
 				</p>
 
 				<section className={styles.page__counters}>
-					<Counter
-						name="subscribers"
-						value="20k+"
-					/>
-
-					<Counter
-						name="successful cases"
-						value="19,5K"
-					/>
-
-					<Counter
-						name="rating"
-						value="4.8/5"
-					/>
+					{countersMockData.map((counter) => (
+						<Counter
+							key={counter.name}
+							{...counter}
+						/>
+					))}
 				</section>
 
 				<section className={styles.page__button}>

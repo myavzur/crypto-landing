@@ -24,7 +24,7 @@ const MainPage: FC = () => {
 				className={cn(
 					styles.container,
 					styles.container_absolute,
-					styles["container_role-feedback"]
+					styles["container_role-currencies"]
 				)}
 			>
 				<BitcoinSvg className={cn(styles.currency, styles.currency_bitcoin)} />

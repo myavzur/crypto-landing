@@ -11,8 +11,7 @@
 	max-width: 1280px;
 	padding: 40px 0 35px 0;
 
-
-	@include bp(phone-portrait) {
+	@include breakpoint(phone-portrait) {
 		max-width: 100%;
 		padding: 15px;
 		align-items: center;
@@ -26,20 +25,16 @@
 		align-items: flex-end;
 	}
 
-	&_role-content {
-		z-index: var(--z-page-main-content);
-	}
-
-	&_role-currencies {
+	&[data-container-role="currencies"] {
 		z-index: var(--z-page-main-currencies);
 	}
 
-	&_role-feedback {
+	&[data-container-role="feedback"] {
 		z-index: var(--z-page-main-feedback);
+	}
 
-		@include bp(phone-portrait) {
-			display: none;
-		}
+	&[data-container-role="content"] {
+		z-index: var(--z-page-main-content);
 	}
 }
 
@@ -62,9 +57,23 @@
 		bottom: 0;
 		right: 0;
 	}
+
+	@include breakpoint(phone-portrait) {
+		height: 30vmax;
+		width: 30vmax;
+
+		&_litecoin {
+			top: 27vmax;
+			right: 22vh;
+		}
+
+		&_ethereum {
+			top: calc(30vmax + 45px);
+		}
+	}
 }
 
-.feedback {
+.feedback-cards {
 	z-index: var(--z-page-main-feedback);
 	position: absolute;
 	width: 400px;
@@ -95,7 +104,7 @@
 		font-size: 84px;
 		font-weight: 700;
 
-		@include bp(phone-portrait) {
+		@include breakpoint(phone-portrait) {
 			font-size: 40px;
 			text-align: center;
 			word-break: break-word;
@@ -106,7 +115,7 @@
 		color: var(--color-grey);
 		font-size: 34px;
 
-		@include bp(phone-portrait) {
+		@include breakpoint(phone-portrait) {
 			font-size: 20px;
 			text-align: center;
 		}

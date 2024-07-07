@@ -22,38 +22,35 @@ const MainPage: FC = () => {
 
 	return (
 		<main className={styles.page}>
+			<div
+				data-container-role="currencies"
+				className={cn(styles.container, styles.container_absolute)}
+			>
+				<BitcoinSvg className={cn(styles.currency, styles.currency_bitcoin)} />
+				<LitecoinSvg className={cn(styles.currency, styles.currency_litecoin)} />
+				<EthereumSvg className={cn(styles.currency, styles.currency_ethereum)} />
+			</div>
+
 			{!isMobile && (
 				<div
-					className={cn(
-						styles.container,
-						styles.container_absolute,
-						styles["container_role-currencies"]
-					)}
+					data-container-role="feedback"
+					className={cn(styles.container, styles.container_absolute)}
 				>
-					<BitcoinSvg className={cn(styles.currency, styles.currency_bitcoin)} />
-					<LitecoinSvg className={cn(styles.currency, styles.currency_litecoin)} />
-					<EthereumSvg className={cn(styles.currency, styles.currency_ethereum)} />
+					<div className={styles["feedback-cards"]}>
+						{feedbackMockData.map((feedback) => (
+							<FeedbackCard
+								key={feedback.accountTag}
+								{...feedback}
+							/>
+						))}
+					</div>
 				</div>
 			)}
 
 			<div
-				className={cn(
-					styles.container,
-					styles.container_absolute,
-					styles["container_role-feedback"]
-				)}
+				data-container-role="content"
+				className={styles.container}
 			>
-				<div className={styles.feedback}>
-					{feedbackMockData.map((feedback) => (
-						<FeedbackCard
-							key={feedback.accountTag}
-							{...feedback}
-						/>
-					))}
-				</div>
-			</div>
-
-			<div className={cn(styles.container, styles["container_role-content"])}>
 				<h1 className={styles.page__title}>
 					Do you want to Learn more About cryptocurrencies{" "}
 					<GradientText>quickly and easily ?</GradientText>

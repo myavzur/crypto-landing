@@ -7,7 +7,7 @@ $laptop-md-max-width: 1400px;
 $desktop-max-width: 1680px;
 
 // Responsive breakpoints
-@mixin bpto($point) {
+@mixin breakpoint-to($point) {
 	// Portrait phones (320+)
 	@if $point == phone-portrait {
 		@media only screen and (max-width: $phone-portrait-max-width) {
@@ -47,9 +47,9 @@ $desktop-max-width: 1680px;
   }
 }
 
-@mixin bp($points...) {
+@mixin breakpoint($points...) {
   @each $point in $points {
-    @include bpto($point) {
+    @include breakpoint-to($point) {
       @content;
     }
   }

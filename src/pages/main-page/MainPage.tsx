@@ -12,6 +12,7 @@ import LitecoinSvg from "@/assets/vectors/currencies/litecoin.svg?react";
 import { Button } from "@/components/button";
 import { Counter } from "@/components/counter";
 import { FeedbackCard } from "@/components/feedback-card";
+import { GradientText } from "@/components/gradient-text";
 import { Icon } from "@/components/icon";
 import { StoreCard } from "@/components/store-card";
 
@@ -85,7 +86,7 @@ const MainPage: FC = () => {
 			<div className={cn(styles.container, styles["container_role-content"])}>
 				<h1 className={styles.page__title}>
 					Do you want to Learn more About cryptocurrencies{" "}
-					<span className={styles["gradient-text"]}>quickly and easily ?</span>
+					<GradientText>quickly and easily ?</GradientText>
 				</h1>
 
 				<p className={styles.page__verbose}>
